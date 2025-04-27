@@ -1,1 +1,1 @@
-# restaurant-bill
+# restaurant-billing-app
