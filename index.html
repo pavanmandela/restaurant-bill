@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Restaurant Billing App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <img src="logo.png" alt="Restaurant Logo" class="logo">
+    </header>
+    <h1 class="title">🍽️ VIBE & DINE RESTAURANT</h1>
+
+    <!-- Customer Name Input -->
+    <div class="input-container">
+      <label for="customer-name" class="label">Customer Name:</label>
+      <input type="text" id="customer-name" placeholder="Enter customer name" class="input" />
+    </div>
+
+    <!-- Menu Section -->
+    <div id="menu" class="menu">
+      <!-- Menu items dynamically loaded -->
+    </div>
+
+    <!-- Bill Preview -->
+    <div class="bill-section">
+      <h2 class="bill-title">🧾 Your Bill</h2>
+      
+      <div id="bill-items" class="bill-items">
+        <!-- Bill items here -->
+      </div>
+
+      <!-- Subtotal, Tax, Discount, Total -->
+      <div class="summary">
+        <div class="summary-item">
+          <span>Subtotal:</span>
+          <span id="subtotal-amount">₹0</span>
+        </div>
+        <div class="summary-item">
+          <span>Tax (5%):</span>
+          <span id="tax-amount">₹0</span>
+        </div>
+        <div class="summary-item">
+          <span>Discount (10%):</span>
+          <span id="discount-amount">-₹0</span>
+        </div>
+        <hr>
+        <div class="summary-item total">
+          <span>Total:</span>
+          <span id="total-amount">₹0</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Generate PDF Button -->
+    <button onclick="generatePDF()" class="btn">
+      Download Bill (PDF)
+    </button>
+  </div>
+
+  <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
